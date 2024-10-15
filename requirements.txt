@@ -3,3 +3,4 @@ selene>=2.0.0rc8
 urllib3 == 2.2.3
 selenium~=4.25.0
 pypdf
+openpyxl
