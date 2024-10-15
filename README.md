@@ -1,6 +1,7 @@
 Задать папку для скачивания по-умолчанию.
 ---
-from selenium import webdriver
+from selenium import webdriver 
+
 
 options = webdriver.ChromeOptions()
 prefs = {
@@ -97,3 +98,18 @@ print(sheet.cell_value(rowx=3, colx=2))     # достать значение и
 
 for rx in range(sheet.nrows):               # распечатать строки полностью
     print(sheet.row(rx))
+
+---
+Работа с CSV файлом
+---
+import csv
+
+with open("./download_file/csv.csv") as csv_file:  # открываю файл
+    reader = csv.reader(csv_file)                  # указываю, что буду работать с этим файлом с помощью библиотеки csv
+    for row in reader:                             # построчная печать из файла
+        print(row)
+
+with open("./download_file/csv.csv") as csv_file:
+    reader = csv.DictReader(csv_file, delimiter=",")
+    for row in reader:                             # печать значений их указанной колонки
+        print(row['Название'])
