@@ -1,3 +1,18 @@
+Работа с путями
+---
+```python
+import os
+
+CURRENT_FILE = os.path.abspath(__file__)  # местоположение текущего файла
+print(CURRENT_FILE)
+
+CURRENT_DIR = os.path.dirname(CURRENT_FILE)  # текущая директория
+print(CURRENT_DIR)
+
+TMP_DIR = os.path.join(CURRENT_DIR, "download")  # указание директории для скачивания файла
+print(TMP_DIR)
+```
+---
 # Задать папку для скачивания по-умолчанию
 
 ```python
@@ -16,20 +31,6 @@ browser.config.driver_options = options
 ```python
 with open("hello.txt", "a") as example_file:  # 'w' - перезаписывает файл, 'a' - дозаписывает в конце файла
     example_file.write("Hello World\n")
-```
-Работа с путями
----
-```python
-import os
-
-CURRENT_FILE = os.path.abspath(__file__)  # местоположение текущего файла
-print(CURRENT_FILE)
-
-CURRENT_DIR = os.path.dirname(CURRENT_FILE)  # текущая директория
-print(CURRENT_DIR)
-
-TMP_DIR = os.path.join(CURRENT_DIR, "download")  # указание директории для скачивания файла
-print(TMP_DIR)
 ```
 Чтение из PDF-файла
 ---
