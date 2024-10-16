@@ -80,7 +80,7 @@ for cell in sheet['E']:  # все значения из указанной ко�
 from xlrd import open_workbook
 
 workbook = open_workbook("download_file/import_ou_xls.xls")
-
+sheet = workbook.active
 print(workbook.nsheets)         # количество листов
 print(workbook.sheet_names())   # имена листов
 
