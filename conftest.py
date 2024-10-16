@@ -20,7 +20,6 @@ def create_zip_file():
         zip_archive.write("file/pdf_file.pdf", "pdf_file.pdf")
         zip_archive.write("file/csv.csv", "csv.csv")
         zip_archive.write("file/import_ou_xls.xlsx", "import_ou.xlsx")
-        print(zip_archive.namelist())
     yield
     os.remove(f"{TMP_DIR}/archive.zip")
 
