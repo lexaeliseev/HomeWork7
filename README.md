@@ -61,7 +61,7 @@ print(sheet["B1"].value)  # печатаем значение ячейки B1
 sheet2 = workbook["Фейки"]  # получаем другой лист (в скобках название листа)
 print(sheet2["A1"].value)  # печатаем значение ячейки A1 листа sheet2
 
-workbook.active = 0  # делаем 3 лист активным
+workbook.active = 0  # делаем 1 лист активным
 
 cell = sheet["C1"]
 print('Строка: ' + str(cell.row))       # номер строки
